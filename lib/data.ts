@@ -1,9 +1,9 @@
 import React from "react";
 import { BookText, BriefcaseBusiness, GraduationCap } from 'lucide-react';
-import CoffeeShop from "../public/coffee-shop.png"
+import CoffeeShop from "../public/CoffeeShop.png"
 import ContractBuddy from "../public/contractBuddy.png"
 import Instagreet from "../public/SocialMedia.png"
-import DataAnalystAssitant from "../public/Data-Analyst-bg.png"
+import DataAnalystAssitant from "../public/data-analyst-dashboard.png"
 
 export const links = [
     {
@@ -34,27 +34,30 @@ export const links = [
 
   export const experiencesData = [
     {
-      title: " Carelon Global Solutions",
+      company: "Carelon Global Solutions",
+      title: "Associate Software Engineer",
       location: "Bangalore, IN",
       description:
         "I am working here as an Associate Software Developer.Worked on multiple domains like Machine Learning, Banckend Development and Generative AI",
-      icon: BriefcaseBusiness,
+      icon: React.createElement(BriefcaseBusiness),
       date: "Aug 2023 - present",
     },
     {
+      company:"Legato Health Technologies",
       title: "Data Science Intern",
       location: "Hyderabad, IN",
       description:
         "I worked here as a Data Science Intern on NLP project",
-      icon: BookText,
+      icon: React.createElement(BookText),
       date: "May 2022 - July 2022",
     },
     {
-      title: "National Institute of Technology, Karnataka",
+      company:"National Institute of Technology, Karnataka",
+      title: "Student",
       location: "Mangalore, IN",
       description:
         "Studied here, completed my B.Tech course in Information Technology",
-      icon: GraduationCap,
+      icon: React.createElement(GraduationCap),
       date: "Aug 2019 - May 2023",
     },
   ] as const;
@@ -63,21 +66,21 @@ export const links = [
     {
       title: "CocoBOT",
       description:
-        "Designed and implemented a mobile applicaton for a multi-agent chatbot using React Native and open source LLMs to demonstrate the working of multiple agents coupled together. The chatbot has the ability to answer all relevent queries about the products in the coffee shop, take orders from the user and recommend products to go along with thier order, via a recommendation system.",
-      tags: ["React Native", "Generative AI", "Large Language Models", "MongoDB"],
+        "Designed and implemented a mobile applicaton for a multi-agent chatbot using React Native and LLMs to make a multi-agent chatbot which can describe products,take orders and recommend items.",
+      tags: ["React Native", "Generative AI", "LLMs", "MongoDB"],
       imageUrl: CoffeeShop,
     },
     {
-      title: "Data Analyst Assistant",
+      title: "Data Analysis Assistant",
       description:
-        "A Simple Data Analyst assistant for developing insights on your data for non-technical personals, upload your csv files and chat with the bot to get insights, complex queries and plot distributions via a Natural Language",
-      tags: ["Python", "Streamlit", "Large Language Models", "Plotly", "Langchain","Langgraph"],
+        "A Simple Data Analyst assistant - Get insights on CSVs through natural language.",
+      tags: ["Python", "Streamlit", "LLMs", "Plotly", "Langchain","Langgraph"],
       imageUrl:DataAnalystAssitant ,
     },
     {
       title: "Contract Buddy",
       description:
-        "A one stop place to know about your contracts, upload your contracts and let the AI give you pros and cons and many more insights on it.",
+        "A one stop SAAS to know about your contracts, upload your contracts and let the AI give you pros and cons and many more insights on it.If you like it subscribe to get more insights",
       tags: ["Next.js","Tailwind","Google Gemini","Redis"],
       imageUrl: ContractBuddy,
     },
@@ -97,7 +100,7 @@ export const links = [
     "Generative AI",
     "Langchain",
     "Langgraph",
-    "Large Language Models",
+    "LLMs",
     "FastAPI",
     "HTML",
     "CSS",
