@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="z-[999] relative">
         <motion.div
-            className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-25 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full"
+            className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-25 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950 dark:bg-opacity-75 dark:border-black/40"
             initial={{y:-100, x:"-50%", opacity:0}}
             animate={{y:0,x:"-50%",  opacity:1}}
         >
@@ -33,7 +33,7 @@ export default function Header() {
                             setActiveSection(link.name)
                             setLastClick(Date.now())
                         }}
-                        className={clsx("flex justify-center items-center p-3 hover:text-gray-950 transition",{"text-gray-950":activeSection === link.name})}  href={link.hash}>
+                        className={clsx("flex justify-center items-center p-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",{"text-gray-950 dark:text-white":activeSection === link.name})}  href={link.hash}>
                             {link.name}
 
                             {activeSection=== link.name && <motion.span 
@@ -43,7 +43,7 @@ export default function Header() {
                                 stiffness:380,
                                 damping:30
                             }} 
-                            className="bg-gray-100 absolute rounded-full inset-0 -z-10"></motion.span>}
+                            className="bg-gray-100 absolute rounded-full inset-0 -z-10 dark:bg-gray-800"></motion.span>}
                         </Link>
                     </motion.li>
                 ))}

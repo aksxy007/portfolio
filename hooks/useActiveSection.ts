@@ -1,3 +1,6 @@
+"use client"
+
+
 import { ActiveSectionContext } from '@/context/active-section-context'
 import React, { useContext } from 'react'
 

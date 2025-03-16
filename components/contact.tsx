@@ -6,11 +6,13 @@ import useSectionInView from '@/hooks/useSectionInView'
 import SubmitBtn from './submit-btn'
 import {motion} from 'framer-motion'
 import { sendEmail } from '@/actions/send-email'
+import {toast } from 'react-toastify'
 
 
 export default function Contact() {
 
     const {ref} = useSectionInView("Contact",0.4)
+   
 
   return (
     <motion.section 
@@ -39,16 +41,16 @@ export default function Contact() {
             const {data,error}= await sendEmail(formData)
 
             if(error){
-                console.error("Failed to send email",error)
+                toast.error("Oops! Sending message failed")
+                return
             }
 
-            if(data){
-                console.log("Email sent !!")
-            }
+            toast.success("Message sent!")
+            return
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg border border-black/[0.1] dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-12 px-4 sm:h-14  rounded-lg border border-black/[0.1] dark:bg-white dark:opacity-80 dark:focus:opacity-100 transition-all dark:outline-none"
           name="senderEmail"
           type="email"
           required
@@ -56,7 +58,7 @@ export default function Contact() {
           placeholder="Your email"
         />
         <textarea
-          className="h-52 my-3 rounded-lg border border-black/[0.1] p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-52 my-3 rounded-lg border border-black/[0.1] p-4 dark:bg-white dark:opacity-80 dark:focus:opacity-100 transition-all dark:outline-none"
           name="message"
           placeholder="Your message"
           required
@@ -64,6 +66,7 @@ export default function Contact() {
         />
         <SubmitBtn/>
       </form>
+      
     </motion.section>
   )
 }

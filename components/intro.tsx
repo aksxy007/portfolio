@@ -82,7 +82,7 @@ export default function Intro() {
         className="flex flex-col sm:flex-row justify-center items-center gap-3 text-sm sm:text-lg font-medium"
       >
         <Link
-          className="bg-gray-900 text-white px-5 py-2 sm:px-7 sm:py-3 flex items-center gap-2 rounded-full outline-none hover:scale-110 transition"
+          className="bg-gray-900 text-white px-5 py-2 sm:px-7 sm:py-3 flex items-center gap-2 rounded-full outline-none hover:scale-110 transition dark:border dark:border-white/20"
           href={"#contact"}
           onClick={()=>{
             setActiveSection("Contact")
@@ -94,24 +94,24 @@ export default function Intro() {
         </Link>
         <a
           href="/CV.pdf" download={true}
-          className="bg-white px-5 py-2 sm:px-7 sm:py-3 flex text-black items-center gap-2 rounded-full border border-gray-200 outline-none hover:scale-110 transition"
+          className="bg-white px-5 py-2 sm:px-7 sm:py-3 flex text-black items-center gap-2 rounded-full border border-gray-200 outline-none hover:scale-110 transition dark:bg-white/10 dark:border-none dark:text-white"
         >
-          Download Resume <Download className="text-black" />
+          Download Resume <Download className="text-black dark:text-white" />
         </a>
         <div className="flex flex-row justify-center items-center gap-2">
           <a
-            className="bg-white p-3 flex text-gray-700 items-center gap-2 rounded-full border border-gray-200 outline-none hover:scale-110 transition"
+            className="bg-white p-3 flex text-gray-700 items-center gap-2 rounded-full border border-gray-200 outline-none hover:scale-110 transition dark:bg-white/10 dark:border-gray-600"
             href="https://www.linkedin.com/in/atulkumarsingh07/"
             target="blank"
           >
-            <LucideLinkedin  className="opacity-70 hover:opacity-100"/>
+            <LucideLinkedin  className="opacity-70 hover:opacity-100 dark:text-white"/>
           </a>
           <a
-            className="bg-white p-3 flex text-gray-700 items-center gap-2 rounded-full border border-gray-200 outline-none hover:scale-110 transition"
+            className="bg-white p-3 flex text-gray-700 items-center gap-2 rounded-full border border-gray-200 outline-none hover:scale-110 transition dark:bg-white/10 dark:border-gray-600"
             href="https://github.com/aksxy007"
             target="blank"
           >
-            <GithubIcon className="opacity-70 hover:opacity-100"/>
+            <GithubIcon className="opacity-70 hover:opacity-100 dark:text-white"/>
           </a>
         </div>
       </motion.div>

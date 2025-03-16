@@ -1,6 +1,8 @@
  "use server"
 
  import { Resend } from "resend"
+ import ContactFormEmail from "@/email/contacat-form-email"
+import React from "react"
 
  const resend = new Resend(process.env.RESEND_API_KEY)
  const validateString = (value:unknown,maxLength:number)=>{
@@ -34,7 +36,10 @@ export const sendEmail = async (formData:FormData)=>{
         to: ["atul13062001@gmail.com"],
         subject: "Message from portfolio",
         replyTo:senderEmail as string,
-        text:message as string
+        react: React.createElement(ContactFormEmail,{
+            message:message as string,
+            senderEmail:senderEmail as string
+        })
     })
     
    
