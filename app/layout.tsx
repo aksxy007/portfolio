@@ -12,20 +12,8 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Personal Portfolio",
+  title: "Atul Singh | Portfolio",
   description: "Atul is a fullstack data science developer with 1.5 years exp.",
 };
 
