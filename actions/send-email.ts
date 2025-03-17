@@ -4,7 +4,7 @@
  import ContactFormEmail from "@/email/contacat-form-email"
 import React from "react"
 
- const resend = new Resend(process.env.RESEND_API_KEY)
+ const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY)
  const validateString = (value:unknown,maxLength:number)=>{
     if(!value || typeof value!=='string' || value.length>maxLength){
         return false
